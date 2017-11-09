@@ -5,130 +5,154 @@
 	<link href="https://fonts.googleapis.com/css?family=Walter+Turncoat" rel="stylesheet">
 	<style type="text/css">
 	*{
-	background-color:white;
-	color: black;
+	background-color:black;
+	color: white;
 	}
- 	#TitleTopic{
-  		display: flex;
-  		justify-content: center;
-  		font-size: 70px;
-  		text-decoration: underline;
- 	}
- 	#BackgroundInfo{
-  		font-size: 50px;
-  		text-decoration: underline;
- 	}
- 	#BackgroundInfo:hover{
-  		color:black;
-  		background-color: white;
- 	}
- 	.Imgs{
-  		text-align: center;
- 	}
- 	img{
-  		width:100%;
-  		height:500px;
- 	}
- 	#Parent2{
-  		display: flex;
- 	}
- 	.Child2{
-  		font-size: 30px;*/
-  		text-align: justify;
-  		width: calc((100% / 3) - 10px);
- 	}
- 	.Child2:hover{
-  		border:white solid 2px;
-  		font-size: 31px;
-  		transition: all 0.3s ease-in-out 0s;
-  		color:black;
-  		background-color: white;
- 	}
- 	#SubTopicStats{
-  		font-size: 50px;
-  		text-decoration: underline;
- 	}
- 	#SubTopicStats:hover{
-  		color:black;
-  		background-color: white;
- 	}
- 	.EndInfo{
-  		font-size: 35px;
- 	}
- 	.EndInfo:hover{
-  		border:white solid 2px;
-  		font-size: 36px;
-  		transition: all 0.3s ease-in-out 0s;
-  		color:black;
-  		background-color: white;
- 	}
- 	#Link1{
-  		color: lightblue;
-  		font-size: 35px;
- 	}
- 	#Buttons{
-  		color: black;
- 	}
-	</style>
-	</head>
-	<script type="text/javascript">
-		function calculate(){
-		
-			var item1 = parseFloat(document.getElementById("item1amount").value);
-			var item2 = parseFloat(document.getElementById("item2amount").value);
-			var item3 = parseFloat(document.getElementById("item3amount").value);
-			var quantity = (item1 + item2 + item3);
-			var subtotal = (item1 * 500)+(item2 * 250)+(item3 * 250);
-			var tax = subtotal * 0.0875;
-			var shipping = "";
-				if (subtotal < 100){
-					shipping += 25;
-				} else if (subtotal < 200){
-					shipping += 10;
-				} else{
-					shipping += 0;
-				}
-			var total = (subtotal + tax + shipping);
-			var wholesale = (item1 * 10)+(item2 * 5)+(item3 * 5);
-			var profit = (subtotal - wholesale);
-			Output.innerHTML ="The Amount of Items Sold is: " + quantity + "<br>" + "The Subtotal is: $" + subtotal + "<br>" + "The Tax is: $" + tax + "<br>" + "The Shipping is: $"+ shipping + "<br>" + "<u>"+"The Total is: $" + total + "<br>"+"</u>" + "The Wholesale price is: $" + wholesale + "<br>" + "The profit is: $" + profit;
-			}
-	</script>
-	<body>
-		<div id="TitleTopic">Hao Jun's Amazing Shop</div>
-		<div id="BackgroundInfo">*If you don't buy anything don't talk to me*</div>
- 	<table>
-   		<tr>
-     		<td><img class="pics" src="Potato.png" style="width:500px;height:500px;background-color:white;"></td>
-     		<td><img class="pics" src="Hotdog.jpg" style="width:500px;height:500px;"></td>
-     		<td><img class="pics" src="FrenchFries.png" style="width:450px;height:500px;"></td>
-   		</tr>
- 		<tr>
-  			<td>
-  			<div class="Child2">Potato ($500/per)</div>
-  			<input type="text" id="item1amount" placeholder="Amount" value=0>
-  			<button onclick = "calculate()">Submit Order</button>
-  			</td>
-  			<td>
-  			<div class="Child2">Hot Dog ($250/per)</div>
-  			<input type="text" id="item2amount" placeholder="Amount" value=0>
-     		<button onclick = "calculate()">Submit Order</button>
-  			</td>
-  			<td>
-  			<div class="Child2">French Fries ($250/per)</div>
-  			<input type="text" id="item3amount" placeholder="Amount" value=0>
-     		<button onclick = "calculate()">Submit Order</button>
-  			</td>
- 		</tr>
+	#TitleTopic{
+		display: flex;
+		justify-content: center;
+		font-size: 70px;
+		text-decoration: underline;
+	}
+	#BackgroundInfo{
+		font-size: 50px;
+		text-decoration: underline;
+	}
+	#BackgroundInfo:hover{
+		transition: all 0.5s ease-in-out 0s;
+		color:red;
+		background-color: white;
+	}
+	.Imgs{
+		text-align: center;
+	}
+	img{
+		width:100%;
+		height:500px;
+	}
+	#Parent2{
+		display: flex;
+	}
+	.Child2{
+		font-size: 20px;*/
+		text-align: justify;
+		width: calc((100% / 3) - 10px);
+	}
+	.Child2:hover{
+		border:white solid 2px;
+		font-size: 21px;
+		transition: all 0.5s ease-in-out 0s;
+		color:black;
+		background-color: white;
+	}
+	#SubTopicStats{
+		font-size: 50px;
+		text-decoration: underline;
+	}
+	#SubTopicStats:hover{
+		color:black;
+		background-color: white;
+	}
+	.EndInfo{
+        font-size: 20px;
+	}
+	.EndInfo:hover{
+		border:white solid 2px;
+		font-size: 26px;
+		transition: all 0.3s ease-in-out 0s;
+		color:black;
+		background-color: white;
+	}
+	#Link1{
+		color: lightblue;
+		font-size: 35px;
+	}
+	#Buttons{
+		color: black;
+	}
+	button:hover{
+		color: lightblue;
+		background-color: white;
+		transition: all 0.2s ease-in-out 0s;
+	}
+	.pics:hover{
+		transition: all 3.0s ease-in-out 0s;
+		transform: rotate(360deg);
+	}
+   </style>
+   </head>
+   <script type="text/javascript">
+       function calculate(){
+           var item1 = parseFloat(document.getElementById("item1amount").value);
+           var item2 = parseFloat(document.getElementById("item2amount").value);
+           var item3 = parseFloat(document.getElementById("item3amount").value);
+           var quantity = (item1 + item2 + item3);
+           var subtotal = (item1 * 100)+(item2 * 20)+(item3 * 10);
+           var tax = subtotal * 0.0875;
+            var discount = 0;
+           var shipping = "";
+               if (subtotal < 100 && subtotal > 0){
+                   shipping += 25;
+               } else if (subtotal < 200 && subtotal >= 100){
+                   shipping += 10;
+               } else if (subtotal == 0) {
+                    shipping += 0;
+                } else if (subtotal >= 200) {
+                   shipping += 0;
+               }
+                if (subtotal >= 150 && subtotal <= 499){
+                    discount += 5;
+                } else if (subtotal >= 500 && subtotal <= 999){
+                    discount += 20;
+                } else if (subtotal == 0){
+                    discount += 0;
+                } else {
+                    discount += 50;
+                }
+           var total = (subtotal + tax + shipping - discount);
+           var wholesale = (item1 * 10)+(item2 * 2)+(item3 * 1);
+           var profit = (subtotal - wholesale - discount);
+           Output.innerHTML ="The Amount of Items Sold is: " + quantity + "<br>" + "The Subtotal is: $" + subtotal + "<br>" + "The Tax is: $" + tax + "<br>" + "The Shipping is: $"+ shipping + "<br>" + "The Discount is: $" + discount + "<br>" +"The Total is: $" + total + "<br>"+"</u>" + "The Wholesale price is: $" + wholesale + "<br>" + "The Profit is: $" + profit;
+           }
+   </script>
+   <body>
+       <div id="TitleTopic">Hao Jun's Amazing Shop</div>
+       <div id="BackgroundInfo">*If you don't buy anything don't talk to me*</div>
+   <table>
+         <tr>
+           <td><img class="pics" src="Potato.png" style="width:500px;height:500px;background-color:white;"></td>
+           <td><img class="pics" src="Hotdog.jpg" style="width:500px;height:500px;"></td>
+           <td><img class="pics" src="Frenchfries.png" style="width:450px;height:500px;"></td>
+         </tr>
+       <tr>
+            <td>
+            <div class="Child2">Potato ($100/per)</div>
+            <input type="text" id="item1amount" placeholder="Amount" value=0>
+            <button onclick = "calculate()">Submit Order</button>
+            </td>
+            <td>
+            <div class="Child2">Hot Dog ($20/per)</div>
+            <input type="text" id="item2amount" placeholder="Amount" value=0>
+           <button onclick = "calculate()">Submit Order</button>
+            </td>
+            <td>
+            <div class="Child2">French Fries ($10/per)</div>
+            <input type="text" id="item3amount" placeholder="Amount" value=0>
+           <button onclick = "calculate()">Submit Order</button>
+            </td>
+       </tr>
 
- 	</table>
- 	<p class="EndInfo" id="Output">Purchase info</p>
- 	<p class="EndInfo" id="EndInfoThing">
-	Shipping Information: <br>
-	If the subtotal cost of your items is less than $100, we will charge $25 shipping and handling. <br>
-	If the subtotal cost of your items is $100 - $199.99, we will charge $10 shipping and handling. <br>
-	If the subtotal cost of your items is $200+, we will charge $25 shipping and handling. <br>
-	Deals/Promotions:
-	</p>
+   </table>
+   <p class="EndInfo" id="Output">Purchase info will appear here once you submit a order!</p>
+   <p class="EndInfo" id="EndInfoThing">
+   Shipping Information: <br>
+   If the subtotal cost of your items is less than $100, we will charge $25 shipping and handling. <br>
+   If the subtotal cost of your items is $100 - $199.99, we will charge $10 shipping and handling. <br>
+   If the subtotal cost of your items is $200+, we will charge $0 shipping and handling. <br>
+   Deals/Promotions: <br>
+    Spend $150+ (Before tax) and get $5 off your total! <br>
+    Spend $500+ (Before tax) and get $20 off your total! <br>
+    Spend $1000+ (Before tax) and get $50 off your total!
+   </p>
 </body>
 </html>
