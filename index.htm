@@ -50,8 +50,7 @@
 		text-decoration: underline;
 	}
 	#SubTopicStats:hover{
-		color:black;
-		background-color: white;
+		color:black;		background-color: white;
 	}
 	.EndInfo{
         font-size: 20px;
@@ -59,10 +58,9 @@
 	.EndInfo:hover{		border:white solid 2px;
 		font-size: 26px;
 		transition: all 0.3s ease-in-out 0s;
-		color:black;
+ 		color:black;
 		background-color: white;
-	}
-	#Link1{
+	}	#Link1{
 		color: lightblue;
 		font-size: 35px;
 	}
@@ -82,12 +80,12 @@
    <script type="text/javascript">
        function calculate(){
            var item1 = parseFloat(document.getElementById("item1amount").value);
-           var item2 = parseFloat(document.getElementById("item2amount").value);
+           var item2 = parseFloat(document.getElementById("item2amount").value);
            var item3 = parseFloat(document.getElementById("item3amount").value);
            var quantity = (item1 + item2 + item3);
            var subtotal = (item1 * 100)+(item2 * 20)+(item3 * 10);
            var tax = subtotal * 0.0875;
-            var discount = 0;
+           var discount = 0;
            var shipping = "";
                if (subtotal < 100 && subtotal > 0){
                    shipping += 25;
@@ -95,7 +93,7 @@
                    shipping += 10;
                } else if (subtotal == 0) {
                     shipping += 0;
-                } else if (subtotal >= 200) {
+               } else if (subtotal >= 200) {
                    shipping += 0;
                }
                 if (subtotal >= 150 && subtotal <= 499){
@@ -109,7 +107,7 @@
                 }
            var total = (subtotal + tax + shipping - discount);
            var wholesale = (item1 * 10)+(item2 * 2)+(item3 * 1);
-           var profit = (subtotal - wholesale - discount);
+           var profit = (subtotal - wholesale - discount + shipping);
            Output.innerHTML ="The Amount of Items Sold is: " + quantity + "<br>" + "The Subtotal is: $" + subtotal + "<br>" + "The Tax is: $" + tax + "<br>" + "The Shipping is: $"+ shipping + "<br>" + "The Discount is: $" + discount + "<br>" +"The Total is: $" + total + "<br>"+"</u>" + "The Wholesale price is: $" + wholesale + "<br>" + "The Profit is: $" + profit;
            }
    </script>
