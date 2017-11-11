@@ -49,7 +49,7 @@
 		font-size: 50px;
 		text-decoration: underline;
 	}
-	#SubTopicStats:hover{
+if	#SubTopicStats:hover{
 		color:black;		background-color: white;
 	}
 	.EndInfo{
@@ -59,8 +59,8 @@
 		font-size: 26px;
 		transition: all 0.3s ease-in-out 0s;
  		color:black;
-		background-color: white;
-	}	#Link1{
+if		background-color: white;
+if	}	#Link1{
 		color: lightblue;
 		font-size: 35px;
  	}
@@ -68,8 +68,7 @@
 	}
 	button:hover{
 		color: lightblue;
-		background-color: white;
-		transition: all 0.2s ease-in-out 0s;
+		background-color: white; 		transition: all 0.2s ease-in-out 0s;
 	}
 	.pics:hover{
 		transition: all 3.0s ease-in-out 0s;
@@ -77,10 +76,9 @@
 	}   </style>
    </head>
    <script type="text/javascript">
-       function calculate(){
+        function calculate(){
            var item1 = parseFloat(document.getElementById("item1amount").value);
-           var item2 = parseFloat(document.getElementById("item2amount").value);
-           var item3 = parseFloat(document.getElementById("item3amount").value);
+            var item2 = parseFloat(document.getElementById("item2amount").value);           var item3 = parseFloat(document.getElementById("item3amount").value);
            var quantity = (item1 + item2 + item3);
            var subtotal = (item1 * 100)+(item2 * 20)+(item3 * 10);
            var tax = subtotal * 0.0875;
@@ -89,7 +87,7 @@
                if (subtotal < 100 && subtotal > 0){
                    shipping += 25;
                } else if (subtotal < 200 && subtotal >= 100){
-                   shipping += 10;
+                    shipping += 10;
                } else if (subtotal == 0) {
                     shipping += 0;
                } else if (subtotal >= 200) {
@@ -103,7 +101,7 @@
                     discount += 0;
                 } else if (subtotal > 0 && subtotal < 150) {
 		    discount += 0;
-		} else {
+		} else if (subtotal >= 1000) {
                     discount += 50;
                 }
            var total = (subtotal + tax + shipping - discount);
