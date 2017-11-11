@@ -63,9 +63,8 @@
 	}	#Link1{
 		color: lightblue;
 		font-size: 35px;
-	}
-	#Buttons{
-		color: black;
+ 	}
+	#Buttons{		color: black;
 	}
 	button:hover{
 		color: lightblue;
@@ -74,7 +73,7 @@
 	}
 	.pics:hover{
 		transition: all 3.0s ease-in-out 0s;
-		transform: rotate(360deg);
+ 		transform: rotate(360deg);
 	}   </style>
    </head>
    <script type="text/javascript">
@@ -102,7 +101,9 @@
                     discount += 20;
                 } else if (subtotal == 0){
                     discount += 0;
-                } else {
+                } else if (subtotal > 0 && subtotal < 150) {
+		    discount += 0;
+		} else {
                     discount += 50;
                 }
            var total = (subtotal + tax + shipping - discount);
