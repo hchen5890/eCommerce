@@ -108,7 +108,7 @@
                 }
            var total = (subtotal + tax + shipping - discount);
            var wholesale = (item1 * 10)+(item2 * 2)+(item3 * 1);
-           var profit = (subtotal - wholesale - discount + shipping);
+           var profit = (subtotal - wholesale - discount);
            Output.innerHTML ="The Amount of Items Sold is: " + quantity + "<br>" + "The Subtotal is: $" + subtotal + "<br>" + "The Tax is: $" + tax + "<br>" + "The Shipping is: $"+ shipping + "<br>" + "The Discount is: $" + discount + "<br>" +"The Total is: $" + total + "<br>"+"</u>" + "The Wholesale price is: $" + wholesale + "<br>" + "The Profit is: $" + profit;
            }
    </script>
